@@ -71,9 +71,8 @@ def run_process():
     df = clean_data(df)
     print(f"DataFrame shape after cleaning: {df.shape}")
 
-    silver_path = os.path.join(SILVER_DIR, "crimes_clean.csv")
-    #df.to_parquet(silver_path, engine="pyarrow")
-    df.to_csv(silver_path, index=False)
+    silver_path = os.path.join(SILVER_DIR, "crimes_clean.parquet")
+    df.to_parquet(silver_path, engine="pyarrow", compression="zstd")
     print(f"    Silver layer written -> {silver_path}")
 
     return df 

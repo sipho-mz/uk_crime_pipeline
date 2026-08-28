@@ -15,7 +15,7 @@ def create_connection(silver_csv):
     con = duckdb.connect()
     con.execute(f"""
         CREATE TABLE crimes AS
-        SELECT * FROM read_csv_auto('{silver_csv}')
+        SELECT * FROM read_parquet('{silver_csv}')
     """)
 
     count = con.execute("SELECT COUNT(*) FROM crimes").fetchone()[0]
@@ -75,7 +75,7 @@ def build_top_streets(con):
 def run_transform():
     """Main entry point — run all Gold-layer SQL and save results."""
     os.makedirs(GOLD_DIR, exist_ok=True)
-    silver_csv = os.path.join(SILVER_DIR, "crimes_clean.csv")
+    silver_csv = os.path.join(SILVER_DIR, "crimes_clean.parquet")
 
     con = create_connection(silver_csv)
 
