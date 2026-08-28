@@ -1,0 +1,13 @@
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+.venv/
+venv/
+data/bronze/
+data/silver/
+data/gold/
+.DS_Store
+htmlcov/
+.vscode/
+.coverage

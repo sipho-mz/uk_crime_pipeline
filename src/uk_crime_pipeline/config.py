@@ -1,6 +1,6 @@
 #config.py - Central setting for pipeline
 
-import os 
+import os
 
 # API Settings
 

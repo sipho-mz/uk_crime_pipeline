@@ -11,6 +11,7 @@ import requests
 
 from src.uk_crime_pipeline.config import BASE_API_URL, BRONZE_DIR, LOCATIONS, MONTHS
 
+
 def fetch_crimes(lat, lng, date):
     """Call UK Police API  for one location + month. Returns a list of crimes dicts."""
     url = f"{BASE_API_URL}/crimes-street/all-crimes"
