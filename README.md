@@ -10,7 +10,6 @@ It automates the extraction, processing, and transformation of public UK crime d
 * **`src/uk_crime_pipeline/process.py` (Silver Layer):**
 * **`src/uk_crime_pipeline/transform.py` (Gold Layer):**
 
----
 
 ## 🚀 Quick Start
 
