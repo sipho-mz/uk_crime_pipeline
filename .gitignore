@@ -1,5 +1,6 @@
 __pycache__/
 .pytest_cache/
+src/uk_crime_pipeline/__pycache__/
 .ruff_cache/
 *.py[cod]
 .venv/
